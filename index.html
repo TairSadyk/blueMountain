@@ -13,24 +13,60 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
-    <title>Trailblazers | Exciting tours for adventurous people</title>
+    <title>Blue mountain | Exciting tours for adventurous people</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header__logo-box">
-        <img src="img/logo-white-1.png" alt="Logo" class="header__logo" />
-      </div>
-      <div class="header__text-box">
-        <h1 class="heading-primary">
-          <span class="heading-primary--main">Adventure</span>
-          <span class="heading-primary--sub">is waiting for you</span>
-        </h1>
-        <a class="btn header__btn btn--white btn--animated" href="#">
-          Discover our tours
-        </a>
-      </div>
-    </header>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+      <label for="navi-toggle" class="navigation__button">
+        <ion-icon
+          class="navigation__icon"
+          name="reorder-three-outline"
+        ></ion-icon>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="" class="navigation__link"
+              ><span>01</span> about blue mountain</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link"
+              ><span>02</span> your benefits</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link"
+              ><span>03</span> popular tours</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link"><span>04</span>stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link"><span>05</span> book now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <main>
+      <header class="header">
+        <div class="header__logo-box">
+          <img src="img/logo-white-1.png" alt="Logo" class="header__logo" />
+        </div>
+        <div class="header__text-box">
+          <h1 class="heading-primary">
+            <span class="heading-primary--main">Adventure</span>
+            <span class="heading-primary--sub">is waiting for you</span>
+          </h1>
+          <a class="btn header__btn btn--white btn--animated" href="#">
+            Discover our tours
+          </a>
+        </div>
+      </header>
+
       <section class="section-about">
         <div class="u-center-text u-margin-bottom-large">
           <h2 class="heading-secondary">
@@ -392,6 +428,39 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__logo-box u-center-text">
+        <img src="img/logo-blue-2x.png" class="footer__logo" alt="Logo" />
+      </div>
+      <div class="row u-center-text">
+        <div class="col-1-of-2">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="" class="footer__link">company</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">contact us</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">careers</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">privacy policy</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">terms</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-2-of-2">
+          <p class="footer__copyright">
+            All rights reserved. Copyright &copy; Tair Sadyk.
+          </p>
+        </div>
+      </div>
+    </footer>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
