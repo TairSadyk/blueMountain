@@ -10,6 +10,9 @@
   background-position: top;
   /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0% 100%);
+  }
 
   position: relative;
   &__logo-box {
@@ -18,7 +21,7 @@
     left: 3.5rem;
   }
   &__logo {
-    width: 7.2rem;
+    width: 6rem;
   }
   &__text-box {
     position: absolute;
