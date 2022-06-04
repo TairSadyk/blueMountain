@@ -15,6 +15,9 @@
   }
   &__logo {
     width: 12rem;
+    @include respond(phone) {
+      width: 26rem;
+    }
   }
   &__navigation {
     display: inline-block;

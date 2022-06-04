@@ -30,11 +30,16 @@
     @include respond(phone) {
       top: 2.5rem;
       right: 2.5rem;
+      height: 5rem;
+      width: 5rem;
     }
   }
   &__icon {
     position: relative;
     margin-top: 3.5rem;
+    @include respond(phone) {
+      margin-top: 2.5rem;
+    }
     &,
     &::after,
     &::before {
@@ -44,6 +49,10 @@
       width: 3rem;
       height: 2px;
       transition: all 0.4s ease;
+      @include respond(phone) {
+        width: 2.2rem;
+        height: 1.3px;
+      }
     }
     &::before,
     &::after {
@@ -53,16 +62,28 @@
     }
     &::before {
       top: -0.8rem;
+      @include respond(phone) {
+        top: -0.6rem;
+      }
     }
     &::after {
       top: 0.8rem;
+      @include respond(phone) {
+        top: 0.6rem;
+      }
     }
   }
   &__button:hover &__icon::before {
     top: -1rem;
+    @include respond(phone) {
+      top: -0.6rem;
+    }
   }
   &__button:hover &__icon::after {
     top: 1rem;
+    @include respond(phone) {
+      top: 0.6rem;
+    }
   }
   &__background {
     position: fixed;
@@ -85,6 +106,8 @@
     @include respond(phone) {
       top: 3rem;
       right: 3rem;
+      height: 3.5rem;
+      width: 3.5rem;
     }
   }
   &__checkbox:checked ~ &__background {

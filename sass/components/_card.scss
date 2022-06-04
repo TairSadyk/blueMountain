@@ -6,6 +6,9 @@
   text-align: center;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
   transition: all 0.4s;
+  @include respond(tab-port) {
+    padding: 3.5rem;
+  }
   &:hover {
     transform: translateY(-1.5rem);
   }
@@ -13,17 +16,7 @@
     display: inline-block;
     font-size: 6.4rem;
     color: $color-primary-dark;
-    // border-image: linear-gradient(
-    //   to right,
-    //   $color-primary-light,
-    //   $color-primary-dark
-    // );
-    // border-image-slice: 1;
-    // --border-color: transparent;
 
     --ionicon-stroke-width: 1.4rem;
   }
 }
-// ion-icon {
-
-// }

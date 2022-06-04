@@ -5,6 +5,9 @@
   position: relative;
   height: 51rem;
   width: 100%;
+  @include respond(tab-port) {
+    height: auto;
+  }
   &__side {
     height: 51rem;
     width: 100%;
@@ -17,11 +20,19 @@
     top: 0;
     left: 0;
     transform-style: preserve-3d;
+    @include respond(tab-port) {
+      height: auto;
+      position: relative;
+      border-radius: 1.2rem 1.2rem 0 0;
+    }
     &--front {
       background-color: $color-white;
     }
     &--back {
       transform: rotateY(180deg);
+      @include respond(tab-port) {
+        transform: rotateY(0);
+      }
       &-1 {
         background: linear-gradient(
           to right bottom,
@@ -47,15 +58,21 @@
   }
   &:hover &__side--front {
     transform: rotateY(-180deg);
+    @include respond(tab-port) {
+      transform: rotateY(0);
+    }
   }
   &:hover &__side--back {
     transform: rotateY(0deg);
   }
   &__picture {
-    height: 40%;
+    height: 22rem;
     background-size: cover;
     background-blend-mode: soft-light;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    // @include respond(tab-port) {
+    //   height: 25rem;
+    // }
     &--1 {
       background-image: linear-gradient(
           to right bottom,
@@ -140,6 +157,14 @@
     @include absCenter;
     text-align: center;
     width: 85%;
+    @include respond(tab-port) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      width: 100%;
+      padding: 3rem 0;
+    }
   }
   &__price-box {
     color: $color-white;
@@ -152,5 +177,60 @@
   &__price-value {
     font-size: 6rem;
     font-weight: 200;
+  }
+  /////////////////////////////////////////
+  @include respond(tab-land) {
+    height: auto;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &__side {
+      height: auto;
+      position: relative;
+      border-radius: 1.2rem 1.2rem 0 0;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0);
+        border-radius: 0 0 1.2rem 1.2rem;
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+        margin-top: -5.5rem;
+      }
+    }
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+    &:hover &__side--back {
+      transform: rotateY(0deg);
+    }
+
+    &__heading {
+      font-size: 2.5rem;
+      top: 25%;
+      // width: 60%;
+    }
+    &__details {
+      margin-bottom: 3.5rem;
+    }
+
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      width: 100%;
+      padding: 7rem 4rem 4rem;
+    }
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+    &__price-value {
+      font-size: 5rem;
+    }
+  }
+  @include respond(phone) {
+    &__heading {
+      right: 10%;
+      font-size: 2.4rem;
+    }
   }
 }

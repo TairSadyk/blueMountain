@@ -10,8 +10,9 @@
   background-position: top;
   /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
-  @include respond(phone) {
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0% 100%);
+  @include respond(tab-port) {
+    height: 85vh;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
   }
 
   position: relative;
@@ -29,19 +30,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    @include respond(tab-port) {
+      top: 40%;
+    }
   }
-}
-
-.grid-test {
-  color: $color-white;
-  background-color: #eee;
-  max-width: $grid-width;
-  // margin: 0 auto;
-  margin-top: 6rem;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: $vertical-gap;
-  row-gap: $horizontal-gap;
 }
 // selects all elements with class atribute starting with 'col-...'
 // ^ starts with

@@ -8,8 +8,9 @@
   // justify-content: space-between;
   gap: 6rem;
   @include respond(tab-port) {
+    grid-template-columns: 1fr;
     max-width: $grid-width-tab;
-    gap: 0;
+    column-gap: 4rem;
     row-gap: 4rem;
     padding: 0 3rem;
   }
@@ -61,7 +62,9 @@
   }
   &-1-of-2,
   &-2-of-2 {
-    grid-column: 1/-1;
+    @include respond(tab-port) {
+      grid-column: 1/-1;
+    }
   }
   &-1-of-3,
   &-2-of-3,
