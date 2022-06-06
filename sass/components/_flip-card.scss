@@ -5,9 +5,7 @@
   position: relative;
   height: 51rem;
   width: 100%;
-  @include respond(tab-port) {
-    height: auto;
-  }
+  border-radius: 1.2rem;
   &__side {
     height: 51rem;
     width: 100%;
@@ -15,24 +13,17 @@
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     transition: all 0.8s ease;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
     transform-style: preserve-3d;
-    @include respond(tab-port) {
-      height: auto;
-      position: relative;
-      border-radius: 1.2rem 1.2rem 0 0;
-    }
     &--front {
       background-color: $color-white;
     }
     &--back {
       transform: rotateY(180deg);
-      @include respond(tab-port) {
-        transform: rotateY(0);
-      }
       &-1 {
         background: linear-gradient(
           to right bottom,
@@ -58,9 +49,6 @@
   }
   &:hover &__side--front {
     transform: rotateY(-180deg);
-    @include respond(tab-port) {
-      transform: rotateY(0);
-    }
   }
   &:hover &__side--back {
     transform: rotateY(0deg);
@@ -70,9 +58,6 @@
     background-size: cover;
     background-blend-mode: soft-light;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-    // @include respond(tab-port) {
-    //   height: 25rem;
-    // }
     &--1 {
       background-image: linear-gradient(
           to right bottom,
@@ -147,7 +132,6 @@
         padding: 1rem;
         font-size: 1.5rem;
         &:not(:last-child) {
-          // margin-bottom: 1.5rem;
           border-bottom: 1px solid $color-grey-light-2;
         }
       }
@@ -157,14 +141,6 @@
     @include absCenter;
     text-align: center;
     width: 85%;
-    @include respond(tab-port) {
-      position: relative;
-      top: 0;
-      left: 0;
-      transform: translate(0, 0);
-      width: 100%;
-      padding: 3rem 0;
-    }
   }
   &__price-box {
     color: $color-white;
@@ -179,7 +155,7 @@
     font-weight: 200;
   }
   /////////////////////////////////////////
-  @include respond(tab-land) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 

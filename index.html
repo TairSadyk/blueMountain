@@ -98,7 +98,29 @@
           </div>
           <div class="row-imgs col-2-of-2">
             <div class="composition">
-              <img
+              <img 
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" 
+                sizes="(max-width:900px) 24vw, (max-width:600px) 25vw, 300px" 
+                alt="Nature photo 1"
+                class="composition__photo composition__photo--p1"
+                src="img/nat-1-large.jpg"
+                >
+              <img 
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" 
+                sizes="(max-width:900px) 24vw, (max-width:600px) 25vw, 300px" 
+                alt="Nature photo 2"
+                class="composition__photo composition__photo--p2"
+                src="img/nat-2-large.jpg"
+                >
+              <img 
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" 
+                sizes="(max-width:900px) 24vw, (max-width:600px) 25vw, 300px" 
+                alt="Nature photo 3"
+                class="composition__photo composition__photo--p3"
+                src="img/nat-3-large.jpg"
+                >
+                
+              <!-- <img
                 src="img/nat-1-large.jpg"
                 alt=""
                 class="composition__photo composition__photo--p1"
@@ -112,7 +134,7 @@
                 src="img/nat-3-large.jpg"
                 alt=""
                 class="composition__photo composition__photo--p3"
-              />
+              /> -->
             </div>
           </div>
         </div>
@@ -432,8 +454,8 @@
     <footer class="footer">
       <div class="footer__logo-box u-center-text">
         <picture>
-          <source media="(max-width: 37.5em)" class="footer__logo" srcset="img/logo-blue-small-1x.png 1x, img/logo-blue-small-2x.png 2x">
-          <img srcset="img/logo-blue-1x.png 1x, img/logo-blue-2x.png 2x"  alt="Logo" class="footer__logo"/>
+          <source media="(max-width: 50em)" class="footer__logo" srcset="img/logo-blue-small-1x.png 1x, img/logo-blue-small-2x.png 2x" src="img/logo-blue-small-2x.png">
+          <img srcset="img/logo-blue-1x.png 1x, img/logo-blue-2x.png 2x"  alt="Logo" class="footer__logo" src="img/logo-blue-2x.png"/>
         </picture>
        
       </div>
