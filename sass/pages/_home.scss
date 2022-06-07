@@ -1,6 +1,6 @@
 .section-about {
   background-color: $color-grey-light-1;
-  padding: 25rem 0;
+  padding: 25rem 3rem;
   margin-top: -20rem;
   @include respond(tab-port) {
     margin-top: -15vh;
@@ -11,17 +11,17 @@
   margin-top: -20rem;
   background-image: linear-gradient(
       to right top,
-      rgba($color-primary-light, 0.6),
-      rgba($color-primary-dark, 0.6)
+      rgba($color-primary-light, 0.5),
+      rgba($color-primary-dark, 0.5)
     ),
     url("../img/nat-4.jpg");
   background-size: cover;
   background-position: bottom;
-  padding: 20rem 0;
+  padding: 20rem 3rem;
   clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
   @include respond(tab-port) {
     clip-path: polygon(0 7%, 100% 0, 100% 93%, 0% 100%);
-    padding: 15rem 0;
+    padding: 15rem 3rem;
     & .row {
       max-width: 65rem;
     }
@@ -35,14 +35,14 @@
 .section-pricing {
   margin-top: -25rem;
   background-color: $color-grey-light-1;
-  padding: 30rem 0 10rem;
+  padding: 30rem 3rem 10rem;
   @include respond(tab-port) {
     padding-bottom: 2rem;
     margin-top: -20rem;
   }
 }
 .section-testimonials {
-  padding: 15rem 0;
+  padding: 15rem 3rem;
   position: relative;
   @include respond(tab-port) {
     padding: 7.5rem 3rem;
@@ -50,7 +50,7 @@
 }
 
 .section-book {
-  padding: 15rem 0;
+  padding: 15rem 3rem;
   background-image: linear-gradient(
     to right bottom,
     rgba($color-primary-light, 0.9),

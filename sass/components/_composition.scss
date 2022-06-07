@@ -7,6 +7,7 @@
     justify-content: center;
     padding: 0 3rem;
   }
+
   &__photo {
     display: inline-block;
     width: 60%;
@@ -17,13 +18,12 @@
     outline-offset: 1.2rem;
     @include respond(tab-port) {
       position: relative;
-      width: 50%;
+      width: 70%;
     }
     @include respond(phone) {
-      width: 40%;
     }
     &--p1 {
-      left: 0;
+      left: -3rem;
       top: -2rem;
       @include respond(tab-port) {
         left: 0;
@@ -31,7 +31,7 @@
       }
     }
     &--p2 {
-      right: 0;
+      right: -1rem;
       top: 2rem;
       @include respond(tab-port) {
         left: 0;
@@ -41,30 +41,30 @@
       }
     }
     &--p3 {
-      top: 10rem;
+      top: 16rem;
       left: 8rem;
       @include respond(tab-port) {
         left: 0;
         top: 1rem;
       }
     }
-    &:hover {
-      outline: 0.6rem solid $color-primary;
-      transform: scale(1.1) translateY(0.5rem);
-      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.4);
-      z-index: 1;
-      @include respond(tab-port) {
-        outline: 0 solid transparent;
-        transform: scale(1) translateY(0);
-        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
-        z-index: 0;
-      }
-    }
+    // &:hover {
+    //   // outline: 0.6rem solid $color-primary;
+    //   transform: scale(1.1) translateY(0.5rem);
+    //   box-shadow: 0 2.5rem 4rem rgba($color-black, 0.4);
+    //   z-index: 1;
+    //   @include respond(tab-port) {
+    //     outline: 0 solid transparent;
+    //     transform: scale(1) translateY(0);
+    //     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    //     z-index: 0;
+    //   }
+    // }
   }
-  &:hover &__photo:not(:hover) {
-    transform: scale(0.95);
-    @include respond(tab-port) {
-      transform: scale(1);
-    }
-  }
+  // &:hover &__photo:not(:hover) {
+  //   transform: scale(0.95);
+  //   @include respond(tab-port) {
+  //     transform: scale(1);
+  //   }
+  // }
 }
